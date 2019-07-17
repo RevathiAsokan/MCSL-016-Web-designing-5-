@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Session 9.1</title>
+<script language="Javascript">
+function change (pic)
+{ 
+	document.picture.src = pic;
+}
+function jumpto(x)
+{
+	if (document.form1.jumpmenu.value != "null") 
+	document.location.href = x
+}
+</script>
+</head>
+<body>
+<p>
+<a href="s1_2.html" onMouseOver="change('toy.jpg')">
+<img src="zigzag.png" name="picture" border="0" alt="Error in loading image"></a>
+</p>
+<form name="form1">
+<select name="jumpmenu" 
+onChange="jumpto(document.form1.jumpmenu.options[document.form1.jumpmenu.options.selectedIndex].value)">
+<option>Jump to...</option>
+<option value="s1_1.html">Program1</option>
+<option value="s1_2.html">Program2</option>
+<option value="s1_3.html">Program3</option>
+</select>
+</form>
+</body>
+</html>
